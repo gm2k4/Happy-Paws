@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Happy Paws Pet Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Happy Paws Pet Care</h1>
+        <p>Tell us about your pet and your care needs.</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>
+                Complete the form below to tell us about your pet
+                and the services you are interested in. This sample
+                form demonstrates how a pet care business can collect
+                basic information from potential customers.
+            </p>
+        </section>
+
+        <section>
+            <h2>Pet Care Inquiry Form</h2>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Your Contact Information</legend>
+
+                    <p>
+                        <label for="full-name">Full name:</label>
+                        <input type="text" id="full-name"
+                               name="full-name" required
+                               autocomplete="name">
+                    </p>
+
+                    <p>
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email"
+                               required autocomplete="email">
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone number (optional):</label>
+                        <input type="tel" id="phone" name="phone"
+                               autocomplete="tel">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>About Your Pet</legend>
+
+                    <p>
+                        <label for="pet-name">Pet's name:</label>
+                        <input type="text" id="pet-name"
+                               name="pet-name" required>
+                    </p>
+
+                    <p>
+                        <label for="pet-type">Type of pet:</label>
+                        <select id="pet-type" name="pet-type" required>
+                            <option value="">Select a pet type</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="bird">Bird</option>
+                            <option value="small-animal">Small animal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="pet-age">Pet's age:</label>
+                        <input type="number" id="pet-age" name="pet-age"
+                               min="0" max="100">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Requested Service</legend>
+
+                    <p>
+                        <label for="service">Service needed:</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="dog-walking">Dog walking</option>
+                            <option value="pet-sitting">Pet sitting</option>
+                            <option value="feeding">Feeding and check-ins</option>
+                            <option value="other">Other care needs</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="start-date">Preferred start date:</label>
+                        <input type="date" id="start-date"
+                               name="start-date">
+                    </p>
+
+                    <p>
+                        <label for="details">
+                            Tell us about your pet and care needs:
+                        </label>
+                        <textarea id="details" name="details"
+                                  rows="5" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Inquiry</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>What Happens Next?</h2>
+            <p>
+                In a fully implemented website, the business would
+                review the inquiry and contact the pet owner to discuss
+                service availability and care arrangements.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Happy Paws Pet Care. All rights reserved.</p>
+        <p><a href="index.html">Return to the homepage</a></p>
+    </footer>
+</body>
+</html>
