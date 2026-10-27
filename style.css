@@ -227,3 +227,34 @@ footer a {
     }
 }
 
+/* Touchstone 4: Form validation and interactive service */
+
+.error-message {
+    display: block;
+    color: #b42318;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+[aria-invalid="true"] {
+    border: 2px solid #b42318;
+}
+
+.service-information {
+    background-color: #FFF8F0;
+    border-left: 4px solid #D88C5A;
+    padding: 12px;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+#service-description,
+#form-status {
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+#form-status {
+    font-weight: bold;
+}
+
