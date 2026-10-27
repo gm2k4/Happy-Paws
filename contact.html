@@ -27,16 +27,15 @@
             <h2>Get in Touch</h2>
             <p>
                 Complete the form below to tell us about your pet
-                and the services you are interested in. This sample
-                form demonstrates how a pet care business can collect
-                basic information from potential customers.
+                and the services you are interested in. Happy Paws
+                wants to help you find care that suits your pet's needs.
             </p>
         </section>
 
         <section>
             <h2>Pet Care Inquiry Form</h2>
 
-            <form action="#" method="get">
+            <form id="inquiry-form" action="#" method="get" novalidate>
                 <fieldset>
                     <legend>Your Contact Information</legend>
 
@@ -45,12 +44,18 @@
                         <input type="text" id="full-name"
                                name="full-name" required
                                autocomplete="name">
+                        <small id="full-name-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
 
                     <p>
                         <label for="email">Email address:</label>
                         <input type="email" id="email" name="email"
                                required autocomplete="email">
+                        <small id="email-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
 
                     <p>
@@ -67,6 +72,9 @@
                         <label for="pet-name">Pet's name:</label>
                         <input type="text" id="pet-name"
                                name="pet-name" required>
+                        <small id="pet-name-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
 
                     <p>
@@ -79,12 +87,15 @@
                             <option value="small-animal">Small animal</option>
                             <option value="other">Other</option>
                         </select>
+                        <small id="pet-type-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
 
                     <p>
                         <label for="pet-age">Pet's age:</label>
-                        <input type="number" id="pet-age" name="pet-age"
-                               min="0" max="100">
+                        <input type="number" id="pet-age"
+                               name="pet-age" min="0" max="100">
                     </p>
                 </fieldset>
 
@@ -100,7 +111,17 @@
                             <option value="feeding">Feeding and check-ins</option>
                             <option value="other">Other care needs</option>
                         </select>
+                        <small id="service-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
+
+                    <div class="service-information">
+                        <h3>Learn About Your Selected Service</h3>
+                        <p id="service-description" aria-live="polite">
+                            Choose a service to see more information.
+                        </p>
+                    </div>
 
                     <p>
                         <label for="start-date">Preferred start date:</label>
@@ -113,7 +134,10 @@
                             Tell us about your pet and care needs:
                         </label>
                         <textarea id="details" name="details"
-                                  rows="5" required></textarea>
+                                  rows="5" cols="40" required></textarea>
+                        <small id="details-error"
+                               class="error-message"
+                               aria-live="polite"></small>
                     </p>
                 </fieldset>
 
@@ -121,15 +145,26 @@
                     <button type="submit">Submit Inquiry</button>
                     <button type="reset">Clear Form</button>
                 </p>
+
+                <p>
+                    <button type="button" id="clear-preferences">
+                        Clear Saved Preferences
+                    </button>
+                </p>
+
+                <p id="form-status" role="status"
+                   aria-live="polite"></p>
             </form>
         </section>
 
         <section>
             <h2>What Happens Next?</h2>
             <p>
-                In a fully implemented website, the business would
-                review the inquiry and contact the pet owner to discuss
-                service availability and care arrangements.
+                After an inquiry is submitted, a pet care business
+                would normally review the information and contact
+                the owner to discuss availability and arrangements.
+                This website demonstration validates information
+                in the browser but does not send inquiries to a business.
             </p>
         </section>
     </main>
@@ -138,5 +173,7 @@
         <p>&copy; 2026 Happy Paws Pet Care. All rights reserved.</p>
         <p><a href="index.html">Return to the homepage</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
